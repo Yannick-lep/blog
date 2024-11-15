@@ -23,6 +23,7 @@ $connexion = null;
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -39,7 +40,12 @@ $connexion = null;
         
         ?>
         <section>
-            <h2><?= $article['title'] ?></h2>
+            <h2><?= $article['title'] ?>
+        <span hx-delete="del_article.php?id=<?= $article['id'] ?>"
+        hx-confirm="Etes vous certain de supprimer cet article !?"
+        hx-swap="outerHTML"
+        class="delete">X</span>
+        </h2>
             <p><?= $article['content'] ?></p>
         </section>
         <?php 
