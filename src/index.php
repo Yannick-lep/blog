@@ -34,6 +34,8 @@ $connexion = null;
             hx-swap="outerHTML"
             >Ajouter un article</a>
 
+            <a href="add_fake_data.php">Ajouter de fausses donnée</a>
+
             <a href="login.php"
             hx-get="login.php"
             hx-target="#form_login"
