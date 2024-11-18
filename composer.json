@@ -1,0 +1,12 @@
+{
+    "name": "ceppicadmin/blog",
+    "description": "blog en php",
+    "autoload": {
+        "psr-4": {
+            "Ceppicadmin\\Blog\\": "src/"
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.24"
+    }
+}
