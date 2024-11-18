@@ -26,15 +26,24 @@ $connexion = null;
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main hx-trigger="*">
         <header>
             <a href="add_form.php"
             hx-get="add_form.php"
             hx-target="#form_ajout_article"
             hx-swap="outerHTML"
             >Ajouter un article</a>
+
+            <a href="add_fake_data.php">Ajouter de fausses donnée</a>
+
+            <a href="login.php"
+            hx-get="login.php"
+            hx-target="#form_login"
+            hx-swap="outerHTML">Se connecter</a>
+
         </header>
         <section id="form_ajout_article"></section>
+        <section id="form_login"></section>
         <?php
         foreach($articles as $article):
         
